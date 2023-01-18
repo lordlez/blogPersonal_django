@@ -6,10 +6,10 @@ from . models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('id', 'image', 'title', 'desc', 'created')
-    list_display_links = ('id', 'title')
-    list_filter = ('created', 'updated')
-    search_fields = ('title', 'desc')
+    list_display = ('id', 'image', 'title', 'desc', 'created') # ver las columnas
+    list_display_links = ('id', 'title') # crear link a las columnas
+    list_filter = ('created', 'updated') # crear filtrado
+    search_fields = ('title', 'desc') # crear barra busqueda
 
-    readonly_fields = ('created', 'updated')
+    readonly_fields = ('created', 'updated') # mostrar fecha creacion y actualizacion
 

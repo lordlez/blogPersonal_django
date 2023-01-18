@@ -17,7 +17,7 @@ def profile(request):
     p3.save()
     """
     projects = Project.objects.all() #obtengo todos los objetos
-    return HttpResponse(projects)
+    return render(request, 'profile.html', {'projects': projects})
 
 
 
